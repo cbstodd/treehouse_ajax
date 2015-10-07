@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +8,32 @@
   <link rel="stylesheet" href="master.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
   <script type="text/javascript">
-    //Sets and Creates the xhr request
-    var xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        document.getElementById('ajax-form').innerHTML = xhr.responseText;
+    //1. Creates an XMLHTTP Request object named xhrRequest.
+    var xhrRequest = new XMLHttpRequest();
+
+    //2. Creates the callback function.
+    xhrRequest.onreadystatechange = function() {
+      if (xhrRequest.readyState === 4) {
+        if (xhrRequest.status === 200) {
+          document.getElementById('ajax-form').innerHTML = xhrRequest.responseText;
+        } else {
+          alert(xhrRequest.statusText);
+        }
       }
     };
-    //Calls the xhr request
-    xhr.open('GET', 'form.html');
-    //Creates a xhr function to send the request. In this case removes
-    //button after it has been sent.
+
+    //3. Opens xhr request via GET.
+    xhrRequest.open('GET', 'form.html');
+
+    //4. Sends the xhr request. In this case a function that removes button after it has been sent via 'none'.
     function sendAJAX() {
-      xhr.send();
-      document.getElementById('load-form').style.display = '';
+      xhrRequest.send();
+      document.getElementById('load-form').style.display = 'none';
     }
   </script>
 
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -38,12 +41,12 @@
     <div class="jumbotron">
       <h1>Treehouse jQuery</h1>
       <p>jQuery practice</p>
-      <button type="button" id="clickMe" class="btn btn-danger">Click me!</button>
+      <button type="button" id="load-form" class="btn btn-danger" onclick="sendAJAX()">Show the form</button>
     </div>
 
-
-    <div id="warning" class="alert alert-danger" role="alert">Something has gone terribly wrong.</div>
-
+    <div id="ajax-form">
+      <!-- *#### Div where ajax will load form.html ####* -->
+    </div>
 
     <div class="content">
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -51,17 +54,8 @@
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
     </div>
 
-    <div class="images">
-      <img src="img/spotted_dach.jpg" alt="image" class="img-thumbnail">
-    </div>
-
-    <button type="button" id="load-form" class="btn btn-info" onclick="sendAJAX()">Show the form</button>
-
-    <div id="ajax-form">
-
-    </div>
-
   </div>
+  <!-- *#### Container End ####* -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
