@@ -1,0 +1,22 @@
+[
+  {
+  "name": "Colin",
+  "inoffice": true
+  },
+  {
+  "name": "Charlotte",
+  "inoffice": false
+  },
+  {
+  "name": "Kevin",
+  "inoffice": false
+  },
+  {
+  "name": "Brian",
+  "inoffice": false
+},
+  {
+  "name": "Raney",
+  "inoffice": false
+  }
+]

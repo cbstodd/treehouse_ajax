@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Office jQuery Widget</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Office jQuery Widget</h1>
+			<p>An intranet application that shows if an employee is in the office or not.</p>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="well">
+					<legend>Employees at work:</legend>
+					<ul id="employeeList" class="list-group">
+						<!-- #####= jQuery loads here =##### -->
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="well">
+					<legend>Available Rooms:</legend>
+					<ul id="roomList" class="list-group">
+						<!-- #####= jQuery loads here =##### -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="well">
+					<legend>Subscribe</legend>
+					<form action="/subscribe">
+						<div id="subscribe" class="form-group">
+							<label for="submit">Username</label>
+							<input type="email" class="form-control" id="" placeholder="@" onfocus="this.placeholder = ''" onblur="this.placeholder = '@'">
+							<p class="help-block">Enter your email</p>
+							<button type="button" id="submit" class="btn btn-info">
+								Submit
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- #####= Container END =##### -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- #####= Personal JS below =##### -->
+	<script src="scripts/jquery_widget.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/submit_form.js" charset="utf-8"></script>
+</body>
+
+</html>

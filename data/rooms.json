@@ -1,0 +1,13 @@
+[{
+  "room": "main",
+  "available": false
+}, {
+  "room": "side",
+  "available": true
+}, {
+  "room": "back",
+  "available": true
+}, {
+  "room": "sun",
+  "available": true
+}]
