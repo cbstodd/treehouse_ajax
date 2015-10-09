@@ -1,13 +1,13 @@
 [{
-  "room": "main",
+  "name": "main",
   "available": false
 }, {
-  "room": "side",
+  "name": "side",
   "available": true
 }, {
-  "room": "back",
+  "name": "back",
   "available": true
 }, {
-  "room": "sun",
+  "name": "sun",
   "available": true
 }]

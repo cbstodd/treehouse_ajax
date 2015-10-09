@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('form').submit(function(event) {
 		event.preventDefault();//Stops browser from leaving web page and submitting bad form.
 		var url = $(this).attr("action");//Creates url based on the forms "action".
@@ -10,13 +11,17 @@ $(document).ready(function() {
 					$('#subscribe').html("<span class='alert-success'>You are now subscribed!</span>");
 				}
 		});
-	});
-
-$.get('someMissingFile.html', function(response) {
-	$('#subscribe').html(response);
-}).fail(function(jqXHR) {
-	alert(jqXHR.stausText);
-});
+	});//END SUBMIT>
 
 
-});//End jQuery ready.
+
+
+
+	//ERROR MESSAGE
+	// $.get('someMissingFile.html', function(response) {
+	// $('#subscribe').html(response);
+	// }).fail(function(jqXHR) {
+	// alert(jqXHR.stausText);
+	// });
+
+});//End jQuery ready>
