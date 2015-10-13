@@ -17,6 +17,8 @@ $(document).ready(function() {
 
     function displayPhotos(data) {
       var photoHTML = '<legend>Search results for <b>'+ $searchResult + '</b>:</legend>';
+
+      //data.items IS THE OBJECT OR ARRAY; index IS THE INDEX NUMBER OF THAT ARRAY; photo IS THE PARAMATER THAT IS TO BE DISPLAYED.
       $.each(data.items, function(index, photo) {
         photoHTML += '<li class="col-lg-3 col-md-3 col-sm-3">';
         photoHTML += '<a href="' + photo.link + '">';
