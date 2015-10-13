@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flicker App</title>
+  <link rel="stylesheet" href="css/flicker_app.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.1.0/octicons.min.css">
+  <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Flicker Search</h1>
+      <p>Search the Flicker database for any keywords.</p>
+    </div>
+
+    <div class="row">
+      <form class="form-group col-lg-5 col-md-5 col-sm-5">
+        <label for="search">Search for images</label>
+        <input type="text" class="form-control" id="search" placeholder="Type search results here">
+        <p class="help-block">Type your search results and hit <b>Enter</b> or click <b>Search</b>.</p>
+        <button type="submit" id="submit" class="btn btn-danger">
+          Search
+        </button>
+      </form>
+    </div>
+
+
+    <p>
+      <ul id="photos">
+        <!-- *#### output from flicker.js ####* -->
+      </ul>
+    </p>
+
+
+  </div>
+  <!-- *#### END Container ####* -->
+  <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="scripts/flicker_search.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

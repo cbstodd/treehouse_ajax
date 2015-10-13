@@ -6,7 +6,7 @@ var xhrEmployeeObject = new XMLHttpRequest();
 xhrEmployeeObject.onreadystatechange = function () {
   if (xhrEmployeeObject.readyState === 4) {
     var employees = JSON.parse(xhrEmployeeObject.responseText);
-    var html = " ";//Sets html string variable
+    var html = '';//Sets html string variable
     for (var i = 0; i < employees.length; i += 1) {
       if (employees[i].inoffice === true) {
         html += '<li class="list-group-item list-group-item-success">';

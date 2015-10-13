@@ -1,0 +1,7 @@
+li {
+  list-style-type: none;
+}
+
+img:hover {
+  box-shadow: 0 0 1em #D9534F;
+}

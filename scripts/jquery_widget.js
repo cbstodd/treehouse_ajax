@@ -26,7 +26,7 @@ $(document).ready(function() {
 			} else {
 				printHTML += '<li class="list-group-item list-group-item-warning">';
 			}
-			printHTML += index + ". "  + room.name;
+			printHTML +=  "Room: " + index + "<br/> Name: "  + room.name;
 		});
 
 		$("#roomList").html(printHTML);//Calls the printHTML as html to #employeeList.

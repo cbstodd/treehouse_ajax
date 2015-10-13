@@ -18,10 +18,14 @@ $(document).ready(function() {
 
 
 	//ERROR MESSAGE
-	// $.get('someMissingFile.html', function(response) {
-	// $('#subscribe').html(response);
-	// }).fail(function(jqXHR) {
-	// alert(jqXHR.stausText);
-	// });
+	$.get('office_widget_jquer.html', function(data) {
+	  $('#subscribe').html(data);
+	}).fail(function(jqXHR) {
+		var errorMessage = "";
+		errorMessage += "<p class='alert-danger'>Sorry there was an error. <br/>";
+		errorMessage += "The error was: " + jqXHR.statusText + "</p>";
+		$("#subscribe").html(errorMessage);
+
+	});
 
 });//End jQuery ready>
